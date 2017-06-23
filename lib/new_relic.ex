@@ -20,6 +20,6 @@ defmodule NewRelic do
   @doc false
   @spec configured? :: boolean
   def configured? do
-    Application.get_env(:new_relic, :application_name) != nil && Application.get_env(:new_relic, :license_key) != nil
+    "#{Application.get_env(:new_relic, :application_name)}" != "" && "#{Application.get_env(:new_relic, :license_key)}" != ""
   end
 end
